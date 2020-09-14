@@ -2,12 +2,12 @@ from typing import List
 
 
 def find_smallest(arr: List[int]) -> int:
-    _min = arr[0]
+    min = arr[0]
     min_index = 0
 
     for index in range(1, len(arr)):
-        if _min > arr[index]:
-            _min = arr[index]
+        if min > arr[index]:
+            min = arr[index]
             min_index = index
 
     return min_index
@@ -17,8 +17,8 @@ def find_smallest(arr: List[int]) -> int:
 def selection_sort(arr: List[int]) -> List[int]:
     result = []
     for x in range(len(arr)):
-        _min = find_smallest(arr)
-        result.append(arr.pop(_min))
+        min = find_smallest(arr)
+        result.append(arr.pop(min))
 
     return result
 
